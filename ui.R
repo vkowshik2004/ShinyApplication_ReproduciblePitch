@@ -14,14 +14,11 @@ shinyUI(fluidPage(
     sidebarLayout(
         sidebarPanel(
             br(),br(),br(),
-            radioButtons("radio",h4("Select the predictors needed"),choices = c("Choice 1 - only transmission"=1, "Choice 2 - only weight"=2, "Choice 3 - both"=3)),
+            radioButtons("radio",h4("Select the plot type needed"),choices = c("Choice 1 - only transmission"=1, "Choice 2 - only weight"=2, "Choice 3 - both"=3)),
             submitButton(text = "Click to Plot"),
-            br(),
-            br(),
-            br(),
-            br(),
-            br(),
-            sliderInput("sliderAm", "Transmission of the car?", 0, 1, value = 0),
+            br(),br(),br(),br(),br(),
+            h4("Edit the predictor values"),
+            sliderInput("sliderAm", "Transmission of the car?", 0, 1, value = 0,step = 1),
             sliderInput("sliderWt", "Weight of the car?", 1.5, 5.5, value = 2.0),
             submitButton(text = "Click to Predict")
         ),

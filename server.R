@@ -14,8 +14,6 @@ shinyServer(function(input, output) {
      model2 <- lm(mpg~wt, data = mtcars)
      model3 <- lm(mpg~wt+am, data = mtcars)
 
-
-
      model1pred <- reactive({
          amInput <- input$sliderAm
          predict(model1, newdata = data.frame(am = amInput))
