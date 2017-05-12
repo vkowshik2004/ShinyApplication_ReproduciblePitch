@@ -51,7 +51,6 @@ shinyServer(function(input, output) {
                  geom_smooth(method = "lm", se=FALSE, color="green",lwd = 2, aes(group=1))
          }
      })
-     ?mtcars
      output$pred1 <- renderText({
          model1pred()
      })
